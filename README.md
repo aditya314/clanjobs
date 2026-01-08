@@ -1,4 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 # clanjobs
-# clanjobs
-# clanjobs
+ClanJobs is a professional network where people who share the same college/companies in the past can share job referrals with
+each other. 

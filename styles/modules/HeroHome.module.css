@@ -1,0 +1,5 @@
+.orangeTextGradient {
+    background: linear-gradient(to right, #FE5F55 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

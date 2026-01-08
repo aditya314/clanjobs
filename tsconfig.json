@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    "paths": {
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@api/*": [
+        "pages/api/*"
+      ],
+      "@images/*": [
+        "public/static/images/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@theme/*": [
+        "theme/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ],
+      "@pdf/*": [
+        "public/static/pdf/*"
+      ]
+    },
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "isolatedModules": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "additional.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/api/auth/signin.jsx",
+    "pages/api/auth/signin.js",
+    "pages/api/auth/signin.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

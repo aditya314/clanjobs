@@ -1,0 +1,24 @@
+overwrite: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+schema:
+  - ./src/graphql/schema/typeDefs/**/*.ts #change this if gql folder location changes
+generates:
+  ./src/graphql/types.tsx: #change output file too if qgl location changes
+    documents: # Provide list of files that needs to be checked for queries
+      - ./pages/**/*.ts*
+      - ./src/components/**/*.ts*
+    plugins:
+      - typescript
+      - typescript-resolvers # Add plugin to generate resolvers
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true # We will be using React Hooks so we disable React Components {From the article} I chose to use React hooks in favor of React Components in this sample so we can safely disable them. If your project calls for Components or Higher-Order Components remove the flags.
+      withHOC: false
+      withComponent: false
+      skipTypename: true
+      # We need to override the Apollo imports since the generator uses older @apollo/react-hooks package
+      apolloReactCommonImportFrom: "@apollo/client" 
+      apolloReactHooksImportFrom: "@apollo/client"
